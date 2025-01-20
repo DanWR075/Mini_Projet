@@ -1,0 +1,271 @@
+/* Style général */
+body {
+    font-family: "Bookman Old Style", "Book Antiqua", Bookman, serif;
+    font-size: 16px;  
+    color: #333333;
+    background: white;
+    line-height: 1.8;  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);  /* Ombre pour meilleur lisibilité */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flèche de retour en haut */
+.scroll-to-top {
+    position: fixed; /* Position */ 
+    bottom: 20px; 
+    right: 20px; /* Décalage à droite de la page */
+    font-size: 36px; /* Taille flèche */
+    color: white; 
+    background-color: #01070e8e; 
+    padding: 15px;
+    border-radius: 25%; /* Forme circulaire */
+    text-decoration: none; 
+    display: block; /* Toujours visible */
+    transition: all 0.5s ease; 
+}
+
+/* Affichage de la flèche lorsqu'on la survole */
+.scroll-to-top:hover {
+    background-color: #005bb5; 
+}
+
+ /* Taille plus petite pour les petits écrans */
+media screen and (max-width: 768px) {
+    .scroll-to-top {
+        font-size: 24px; 
+        bottom: 50px; 
+        right: 15px; 
+        padding: 8px; 
+    }
+}
+
+/* Pour très petits écrans (smartphones) */
+@media screen and (max-width: 480px) {
+    .scroll-to-top {
+        font-size: 20px; 
+        bottom: 40px; 
+        right: 10px; 
+        padding: 6px; 
+    }
+}
+
+/* Conteneur central pour le contenu */
+.container {
+    max: width 1200px; /* Limite la largeur du contenu */
+    margin: 20px auto; /* Centrage horizontal et espacement vertical */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style de conteneur de texte */
+.text-background {
+    background-color: rgba(255, 255, 255, 0.504); /* Fond blanc presque opaque(transparent + lisible) */
+    padding: 50px 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure */
+}
+
+@media screen and (max-width: 768px) {
+    .text-background {
+        padding: 30px 40px;
+    }
+}
+
+/* Style du texte dans conteneur */
+.text-background p, 
+.text-background h1, 
+.text-background h2, 
+.text-background h3 {
+    color: #000000; 
+    margin-bottom: 15px;
+}
+/* Page 1 */
+body.page1 {
+    background-image: url('Nip.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Page 2 */
+body.page2 {
+    background-image: url('Ptvht.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Page 3 */
+body.page3 {
+    background-image: url('Hht.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Page 4 */
+body.page4 {
+    background-image: url('Fanfare.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+
+header {
+    background: blue; /* Couleur bleue pour le header (couleur cahier des charges) */
+    color: rgb(8, 0, 0);
+    padding: 1rem;
+    position: relative;
+}
+
+/* Menu burger pour mobile */
+#menuBurger {
+    display: none;
+}
+
+.burger-label {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: rgb(7, 0, 0);
+}
+
+/* Navigation */
+nav {
+    background: blue;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(15, 2, 2);
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    background: red; 
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer {
+    /* Style général des icônes de réseaux sociaux */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    }
+
+/* Style chaques icônes */
+.social-icon {
+    font-size: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+
+.social-icon i {
+    font-size: 36px; /* Taille icônes */
+    }
+
+.social-icon:hover {
+    color: #0073e6; /* Couleur bleue au survol */
+    }
+
+/* Responsive ajustement taille icônes sur petits écrans */
+@media screen and (max-width: 768px) {
+    .social-icon {
+        font-size: 10px;
+        }
+    }
+
+}
+
+/*Ajustement pour mobile */
+@media screen and (max-width: 768px) {
+    .social-icon {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
+/* Version mobile */
+@media screen and (max-width: 768px) {
+    .burger-label {
+        display: block; /* Afficher le menu burger (inspiré de tp)*/
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background: blue; /* Couleur bleue pour le menu mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid rgba(7, 0, 0, 0.975);
+    }
+
+    /* Animation du menu déroulant */
+    #menuBurger:checked ~ nav {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
